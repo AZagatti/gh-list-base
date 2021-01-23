@@ -1,13 +1,20 @@
-import { Container } from "./styles";
+import Input from "src/components/Input";
+import Layout from "src/components/Layout";
+
+import { Form } from "./styles";
 
 export const Home: React.FC = () => {
   return (
-    <Container>
-      <form>
-        <h1>Github Repos</h1>
-        <input type="text" />
-        <button type="submit">Visualizar</button>
-      </form>
-    </Container>
+    <Layout>
+      <Form>
+        <h2>SEARCH</h2>
+        <Input
+          label="Username"
+          placeholder="Digite seu username..."
+          name="username"
+        />
+        <button type="submit">Listar</button>
+      </Form>
+    </Layout>
   );
 };
