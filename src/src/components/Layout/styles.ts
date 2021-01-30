@@ -1,32 +1,31 @@
-import styled, { css } from 'styled-components';
+import { Theme } from 'src/styles/theme';
+import styled from 'styled-components';
 
 export const Container = styled.div`
-  ${({ theme: { colors } }) =>
-    css`
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
-      header {
-        background-color: ${colors.primary};
-        padding: 16px;
-        border-top: 16px solid ${colors.primaryDark};
-        img {
-          width: 150px;
-        }
-      }
+  > header {
+    background-color: ${Theme.Primary};
+    padding: 16px;
+    border-top: 16px solid ${Theme.PrimaryDark};
+    img {
+      width: 150px;
+    }
+  }
 
-      main {
-        flex: 1;
-      }
+  > main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
 
-      footer {
-        font-size: 18px;
-        padding: 8px 0;
-        text-align: center;
-        background-color: ${colors.primary};
-        color: ${colors.background};
-      }
-    `
+  > footer {
+    font-size: 18px;
+    padding: 8px 0;
+    text-align: center;
+    background-color: ${Theme.Primary};
+    color: ${Theme.Background};
   }
 `;
